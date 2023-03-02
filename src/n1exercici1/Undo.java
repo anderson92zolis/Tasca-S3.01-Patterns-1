@@ -1,3 +1,4 @@
+package n1exercici1;
 import java.util.ArrayList;
 
 public class Undo {
@@ -26,7 +27,7 @@ public class Undo {
         listCommants.add(commandInsert);
     }
 
-    public void removeCommand(String commandRemove ) {
+    public void removeCommand(String commandRemove) {
         listCommants.removeIf(nombre -> nombre.equalsIgnoreCase(commandRemove));  // equals
     }
 

@@ -1,76 +1,58 @@
+package n1exercici1;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Undo undo = Undo.getInstance();
-        Scanner myObj = new Scanner(System.in);
-        System.out.println(undo);
-
-        String input;
-
-        /*
-        package aplicacion;
-
-import java.util.Scanner;
-
-
-public class Aplicacion {
-
-    public static void main(String[] args) {
 
         boolean sortir = false;
 
-        do{
-            switch(menu()){
-                case 1: metode1();
-                        break;
-                case 2: metode2();
-                        break;
-                case 3: metode3();
-                        break;
-                case 0: System.out.println("Gràcies per utilitzar l'aplicació");
-                		sortir = true;
-                        break;
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+
+        do {
+            switch (menu()) {
+                case 1:
+                    System.out.println("Insert command to add: ");
+                    String commandInsert = myObj.nextLine();
+                    undo.addCommad(commandInsert) ;
+                    break;
+                case 2:
+                    System.out.println("Insert command to delete");
+                    String deleteCommand = myObj.nextLine();
+                    undo.removeCommand(deleteCommand);
+                    break;
+                case 3:
+                    undo.listCommads();
+                    break;
+                case 0:
+                    System.out.println("Thanks you for using the application ");
+                    sortir = true;
+                    break;
+                default:
+                    System.out.println("Option not recognized, try again");
             }
-        }while(!sortir);
+        } while (!sortir);
     }
 
-    public static byte menu(){
+
+    public static byte menu() {
         Scanner entrada = new Scanner(System.in);
         byte opcio;
         final byte MINIMO = 0;
         final byte MAXIMO = 3;
 
-        do{
-            System.out.println("\nMENú PRINCIPAL");
-            System.out.println("1. Opció 1.");
-            System.out.println("2. Opció 2.");
-            System.out.println("3. Opció 3.");
-            System.out.println("0. Sortir de l'aplicació.\n");
+        do {
+            System.out.println("\nMain Menu");
+            System.out.println("1. Add Command.");
+            System.out.println("2. Delete Command.");
+            System.out.println("3. List all the commands saved.");
+            System.out.println("0. Exists de app.\n");
             opcio = entrada.nextByte();
-            if(opcio < MINIMO || opcio > MAXIMO){
-                System.out.println("Escull una opció vàlida");
+            if (opcio < MINIMO || opcio > MAXIMO) {
+                System.out.println("Option not valid try again");
             }
-        }while(opcio < MINIMO || opcio > MAXIMO);
+        } while (opcio < MINIMO || opcio > MAXIMO);
         return opcio;
-    }
-
-    public static void metode1(){
-        System.out.println("Mètode 1");
-    }
-
-    public static void metode2(){
-       System.out.println("Mètode 2");
-    }
-
-    public static void metode3(){
-       System.out.println("Mètode 3");
-    }
-
-
-}
-         */
-
     }
 }
