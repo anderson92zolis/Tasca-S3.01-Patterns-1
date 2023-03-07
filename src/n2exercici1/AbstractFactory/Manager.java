@@ -20,10 +20,10 @@ public class Manager {
             System.out.println("you must enter a valid COUNTRY");
         }
     }
-    public static void findAddresMenu(String user, String country){
-        Agenda firstFactory= TypeFactoryAgenda.getFactory("");
+    public static void findAddressMenu(String user, String country){
+        Agenda firstFactory= TypeFactoryAgenda.getFactory("address");
         if (country.equalsIgnoreCase("Ecuador")){
-            Address addressFact= firstFactory.getAddress("Ecuador");
+            Address addressFact = firstFactory.getAddress("Ecuador");
             addressFact.findAddress(user);
         }
         else if (country.equalsIgnoreCase("Thailand")) {

@@ -12,9 +12,6 @@ public class PhoneNumberFactory implements Agenda {
         if (country.equalsIgnoreCase("Ecuador")){
             return new EcuadorPhoneNumbers();
         }
-        else if (country.equalsIgnoreCase("United Kingdom")){
-            return new UKPhoneNumbers();
-        }
         else if(country.equalsIgnoreCase("Thailand")){
             return new ThailandPhoneNumbers();
         }
