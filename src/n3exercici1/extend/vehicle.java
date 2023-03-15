@@ -1,11 +1,9 @@
 package n3exercici1.extend;
 
-import java.io.PrintStream;
-
-public abstract class vehicule {
+public abstract class vehicle {
     private int speed;
 
-    public vehicule(int speed) {
+    public vehicle(int speed) {
         this.speed = speed;
     }
 
