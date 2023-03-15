@@ -1,5 +1,7 @@
 package n3exercici1.extend;
 
+import java.io.PrintStream;
+
 public abstract class vehicule {
     private int speed;
 
@@ -17,6 +19,11 @@ public abstract class vehicule {
         this.speed = speed;
     }
     // create the methodes
+
+
+    abstract void start();
+    abstract void accelerate();
+    abstract void braking();
 
 
 }
