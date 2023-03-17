@@ -1,27 +1,25 @@
-package n3exercici1.extend;
+package n3exercici1.ReceiverAndInheritance;
 
-public class Boat extends vehicle{
+public class Boat extends Vehicle {
 
     private String boatRegistration;
 
-    public Boat(int speed, String boatRegistration) {
-        super(speed);
+    public Boat(String boatRegistration) {
         this.boatRegistration = boatRegistration;
     }
 
     @Override
-    void start(){
+    public void start(){
         System.out.println("The boat has started: "+ boatRegistration );
     }
 
     @Override
-    void accelerate() {
+    public void  accelerate() {
         System.out.println("The boat has accelerated: "+ boatRegistration );
 
     }
-
     @Override
-    void braking() {
+    public void braking() {
         System.out.println("The boat has braked: "+ boatRegistration );
     }
 }

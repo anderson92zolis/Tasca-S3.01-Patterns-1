@@ -1,27 +1,26 @@
-package n3exercici1.extend;
+package n3exercici1.ReceiverAndInheritance;
 
-public class Bike extends vehicle {
+public class Bike extends Vehicle {
 
     private String bicycleRegistration;
 
-    public Bike(int speed, String bicycleRegistration) {
-        super(speed);
+    public Bike( String bicycleRegistration) {
         this.bicycleRegistration = bicycleRegistration;
     }
 
     @Override
-    void start(){
+    public void start(){
         System.out.println("The bike has started: "+ bicycleRegistration );
     }
 
     @Override
-    void accelerate() {
+    public void accelerate() {
         System.out.println("The bike has accelerated: "+ bicycleRegistration );
 
     }
 
     @Override
-    void braking() {
+    public void braking() {
         System.out.println("The bike has braked: "+ bicycleRegistration );
     }
 }

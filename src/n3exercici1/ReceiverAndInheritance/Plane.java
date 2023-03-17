@@ -1,27 +1,26 @@
-package n3exercici1.extend;
+package n3exercici1.ReceiverAndInheritance;
 
-public class Plane extends vehicle {
+public class Plane extends Vehicle {
 
     private String planeRegistration;
 
-    public Plane(int speed, String planeRegistration) {
-        super(speed);
+    public Plane(String planeRegistration) {
         this.planeRegistration = planeRegistration;
     }
 
     @Override
-    void start(){
+    public void start(){
         System.out.println("The plane has started: "+ planeRegistration );
     }
 
     @Override
-    void accelerate() {
+    public void accelerate() {
         System.out.println("The plane has accelerated: "+ planeRegistration );
 
     }
 
     @Override
-    void braking() {
+    public void braking() {
         System.out.println("The plane has braked: "+ planeRegistration );
     }
 }
